@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#090d12" />
+  <title>NULL / ASCENT — a pixel action RPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topline"><span><i class="status-dot"></i> SIGNAL FOUND <b>·</b> TOWER 07</span><span class="top-right">FIELD RECORD <b>NO. 001</b></span></header>
+    <section class="screen-frame" aria-label="Game screen">
+      <canvas id="game" width="480" height="270" aria-label="Null Ascent game"></canvas>
+      <div class="scanlines"></div>
+      <div class="screen-vignette"></div>
+      <div id="title-ui" class="title-ui">
+        <div class="title-copy"><div class="eyebrow">A LOST SIGNAL FROM THE OLD WORLD</div><h1>NULL<span>/</span><br>ASCENT</h1><p>THE TOWER IS STILL LISTENING.</p></div>
+        <button id="start-btn" class="start-btn"><span>▶</span> BEGIN ASCENT <small>ENTER</small></button>
+        <div class="title-foot">A MEMORY IS A KIND OF LIGHT <b>◦</b> PRESS TO WAKE</div>
+      </div>
+      <div id="loading-ui" class="loading-ui hidden"><div class="loading-mark">◈</div><div>REBUILDING MEMORY</div><div class="loading-bar"><i></i></div><small>PLEASE WAIT, TRAVELER</small></div>
+      <div class="toast" id="toast"></div>
+    </section>
+    <section class="hud">
+      <div class="hud-left"><div class="portrait"><span>✦</span></div><div class="vitals"><div class="health-label"><span>VITAL</span><span id="hp-text">03 / 03</span></div><div class="hearts" id="hearts"><i></i><i></i><i></i></div><div class="xp-label"><span>MEMORY</span><span id="shard-text">00 / 05</span></div><div class="xp-track"><i id="xp-fill"></i></div></div></div>
+      <div class="element-hud"><div class="element-cap">ATTUNEMENT <span>Q</span></div><div class="element-row" id="element-row"></div><div class="element-name"><i id="element-dot"></i><span id="element-name">EMBER</span><small id="element-type">FIRE</small></div></div>
+      <div class="hud-right"><div class="objective-kicker">CURRENT DIRECTIVE</div><div class="objective" id="objective">CLIMB THE TOWER</div><div class="controls"><span><kbd>WASD</kbd> MOVE</span><span><kbd>SPACE</kbd> STRIKE</span><span><kbd>E</kbd> CHANNEL</span></div></div>
+    </section>
+    <footer class="bottomline"><span>© 198X // MOURNING ENGINE</span><span>THE STORM WILL NOT WAIT <b>▰</b></span><span>V. 0.07.16</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
